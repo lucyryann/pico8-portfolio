@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A portfolio of independent games by Your Name.">
+  <title>Your Name — Game Portfolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #101116;
+      --surface: #191b24;
+      --text: #f3f4f8;
+      --muted: #a4a8b8;
+      --accent: #9c8cff;
+      --border: #303341;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(900px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: clamp(3.5rem, 10vw, 7rem) 0 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      letter-spacing: -0.06em;
+      line-height: 1.05;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .games-heading {
+      margin: 1rem 0 1.25rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .game-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--surface);
+    }
+
+    .game-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .card-content p {
+      margin: 0.5rem 0 1rem;
+      color: var(--muted);
+    }
+
+    .game-embed {
+      display: grid;
+      min-height: 360px;
+      place-items: center;
+      padding: 1rem;
+      border: 1px dashed #55596b;
+      border-radius: 0.75rem;
+      background: #12131a;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .game-embed p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .game-embed code {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0 2.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 1.25rem, 520px);
+      }
+
+      .hero {
+        padding-top: 3.25rem;
+      }
+
+      .game-embed {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="page hero">
+    <p class="eyebrow">Game developer &amp; designer</p>
+    <h1>Your Name</h1>
+    <p class="intro">
+      Hi, I make playful worlds and curious little games. Here is a project
+      I’ve been working on—take a look and give it a play.
+    </p>
+  </header>
+
+  <main class="page">
+    <section aria-labelledby="game-title">
+      <div class="games-heading">
+        <h2 id="game-title">Featured game</h2>
+      </div>
+
+      <article class="game-card">
+        <img
+          class="game-image"
+          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+          alt="Colorful game controller on a desk"
+        >
+        <div class="card-content">
+          <h3>Moonlight Courier</h3>
+          <p>
+            Deliver packages across a sleepy moon town in this cozy,
+            exploration-focused adventure.
+          </p>
+          <div class="game-embed" aria-label="Moonlight Courier game embed area">
+            <p>
+              Your embedded game goes here.<br>
+              Replace this area with an <code>&lt;iframe&gt;</code> or game
+              embed code.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>© 2026 Your Name · Made with care</p>
+    </footer>
+  </main>
+</body>
+</html>
